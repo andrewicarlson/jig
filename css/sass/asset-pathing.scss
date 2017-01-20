@@ -1,0 +1,24 @@
+// Asset Pathing function
+
+@function asset-path($type, $file-name) {
+
+    // $type and $file-name must both be strings: ""
+    $prefix: null;
+
+    // Replace the following prefixes with the paths specific to your project and add or remove conditions (if / else statements) as necessary.
+    @if $type == image {
+        $prefix: "./project/files/images/";
+    } @else if $type == font {
+        $prefix: "./project/files/static/fonts/";
+    } @else if $type == icon {
+        $prefix: "./project/files/images/icons/";
+    } @else {
+        $prefix: "./project/files/";
+    }
+
+    @return $prefix + $file-name;
+}
+
+// Usage
+asset-path("icon", "my-icon/test.png") // ./project/files/images/icons/my-icon-test.png
+asset-path("doc", "xyz.doc") // ./project/files/xyz.doc
