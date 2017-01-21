@@ -1,0 +1,8 @@
+// Be sure to set the base font-size in the HTML tag in your output CSS using the $base-font-size variable declared below. You can then use pxToRem(21) to create pixel perfect designs using rem's. 
+
+$base-font-size: 16;
+
+@function pxToRem($px) {
+
+  @return $px/$base-font-size+rem;
+}

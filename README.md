@@ -39,6 +39,8 @@ Oftentimes in a project we have assets that don't all live in the same place. Wh
 
 #### [Pixel to REM](css/sass/px-to-rem.scss)
 
+This method converts pixels to rems by doing the math for you using the font-size declared in the HTML root. `pxToRem()` conversions are useful when working towards a pixel perfect design from mockups while using a more responsive unit.
+
 # JavaScript
 
 # Fonts
