@@ -106,3 +106,7 @@ Array shuffling is useful when you want to randomize the order that elements com
 ### [.npmrc](dotfiles/npm/.npmrc)
 
 Installing NPM packages is great until members on a team aren't using the same versions. This is usually caused by a `^` or `~` in front of a package version in your `package.json`. This can be solved by an addition to the command line (more cognitive load) or a simple `.npmrc` file placed in the root of the project alongside the `package.json` that tells NPM to save the exact version number.
+
+### [.nvmrc](dotfiles/nvm/.nvmrc)
+
+[NVM](https://github.com/creationix/nvm) is a useful utility for managing versions of Node on a single machine. Some projects may require a newer version of Node than others and NVM makes it easy to switch between those versions. An `.nvmrc` file will force NVM to default to a specific, predetermined version of Node rather than typing `nvm use <version number>` every time.
