@@ -1,4 +1,4 @@
-# The Front-End Jig
+# Jig
 
 This guide is intended to be different than most 'seeds' currently popular in the Front End space. Instead of providing a `gulpfile.js`, `gruntfile.js`, `npm` script or Webpack config, this guide should be a living list of helper utilities and concepts to get projects off on the right foot.
 
