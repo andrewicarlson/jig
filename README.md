@@ -23,7 +23,11 @@ This guide is organized by the type of asset used. For example, a Sass jig would
 
 ## Templating Languages
 
-### Pug (Jade)
+There are many HTML templating engines out there including [Pug](https://pugjs.org/api/getting-started.html), [Haml](http://haml.info/), [Mustache](https://github.com/janl/mustache.js), and many more.
+
+Each templating engine comes with a unique set of pro's and con's but a templating engine will increase process efficiency in the vast majority of projects due to things like generating the majority of tags reducing the actual time spent typing and tracking down missing HTML end tags, and the ability to break components down into composite parts and reuse. If a project has a templating engine built in (like an Angular 2 or React project) then it is likely best to stick with the built in engine. If there is room for a decision on the engine, however, it is recommended that the team picks one engine and sticks with it across multiple projects. 
+
+There are reasons to switch templating engines but the majority of the good ones out there have enough in common that switching engines without a technical reason to do so (instead, a preferential reason) complicates processes and is a waste of developer time, energy, and ultimately money. 
 
 # CSS
 
@@ -32,6 +36,46 @@ This guide is organized by the type of asset used. For example, a Sass jig would
 ### Sass
 
 #### Directory Structure
+
+When building the directory structure in projects using Sass it is sometimes beneficial to group "like" types and do single a single `@import` per type into a larger composite file. This saves a lot of time tracking down individual files and ensuring that files get imported in the proper order. 
+
+For example:
+
+```
+css
+-- components
+-- -- componentX
+-- -- -- _imports.scss
+-- -- -- _componentX.scss
+-- -- -- _componentXHeader.scss
+-- -- _imports.scss // _imports.scss should import the _imports.scss from each of the component directories.
+-- mixins
+-- -- _imports.scss
+-- functions
+-- -- _imports.scss
+-- variables
+-- -- _colors.scss
+-- -- _typography.scss
+-- -- _imports.scss // The _imports.scss file in each directory should import all files in the given directory, such as @import _colors; @import _typography;
+-- styles.scss // The styles.scss should include single line imports of variables/_imports.scss; functions/_imports.scss etc.
+```
+
+An alternative approach is to divide project directory structure by components and include an HTML template file, the relevant CSS and JavaScript all in the same directory and build each of the assets to their composite files using a build process.
+
+For example:
+
+```
+componentX
+-- _componentX.scss
+-- _componentX.pug
+-- _componentX.js
+componentY
+-- _componentY.scss
+-- _componentY.pug
+-- _componentY.js
+```
+
+This approach is similar to the Rule of 1 made more popular by Angular 2. 
 
 #### [Asset Pathing](css/sass/asset-pathing.scss)
 
