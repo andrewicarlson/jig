@@ -1,7 +1,7 @@
 /**
 This jig is a state-in-time example from January 2017 of the webfontloader project.
 
-Learn more by reading about the [webfontloader project](https://github.com/typekit/webfontloader) developed by Google and Typekit.
+Learn more by reading about the project developed by Google and Typekit here: https://github.com/typekit/webfontloader
 **/
 
 WebFontConfig = {
