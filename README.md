@@ -87,6 +87,10 @@ This method converts pixels to rems by doing the math for you using the font-siz
 
 # JavaScript
 
+## [Array Shuffling](javascript/array-shuffle.js)
+
+Array shuffling is useful when you want to randomize the order that elements come out of an array, or choose an element at random.
+
 # Fonts
 
 # Images
