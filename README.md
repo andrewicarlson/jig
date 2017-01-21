@@ -93,6 +93,12 @@ Array shuffling is useful when you want to randomize the order that elements com
 
 # Fonts
 
+## Webfonts
+
+### [webfontloader](fonts/webfontloader.js)
+
+In general, despite a potential brief flash of unstyled text (FOUT), it is best to load webfonts asynchronously. After a user has visited a page on your site once those fonts will usually be cached in their browser so they should only see a FOUT once. This downside of a single FOUT is usually outweighed by the benefits of a significantly faster loading site that is never blocked from loading if the resource, be it Google or Typekit, is unable to serve the fonts that have been requested.
+
 # Images
 
 # Icons
