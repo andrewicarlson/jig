@@ -1,0 +1,15 @@
+{
+  "name": "pepsico_propell",
+  "version": "1.0.0",
+  "description": "pepsico_propel",
+  "main": "index.html",
+  "author": "Jacob Berthelsen - VML",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "2.11.2",
+    "gulp": "3.9.1",
+    "gulp-imagemin": "2.4.0",
+    "gulp-pug": "1.2.0",
+    "gulp-sass": "2.2.0"
+  }
+}

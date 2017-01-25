@@ -1,0 +1,20 @@
+.ato-m-promo
+    block subhead
+        -var subHead= "New!"
+    include ../typography/subhead/subhead
+
+    block heading
+        -var heading= "Swim collection 15% off beach essentials"
+    include ../typography/heading/heading
+
+    .ato-m-promo__text-container
+        block description
+            -var description= "We sell not only top quality products, but give our customers a positive online shopping experience."
+        include ../typography/description/description
+
+    .ato-m-promo__cta
+        block promoButton
+            -var btnLink= "http://www.example.com/"
+            -var btnTarget= "_blank"
+            -var btnText= "Shop now!"
+        include ../buttons/button-primary

@@ -1,0 +1,16 @@
+.ato-a-btn {
+    font-weight: bold;
+    padding: 18px 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: $transition__base;
+}
+
+.ato-a-btn--primary {
+    background-color: green;//$color__btn--primary;
+    color: white;
+
+    &:hover {
+        background-color: $color__btn--primary-hover;
+    }
+}
