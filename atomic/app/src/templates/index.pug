@@ -1,0 +1,24 @@
+//- index.jade
+doctype html
+html
+    include ../components/atoms/head/head
+    body
+        h1 hello
+        p This is a test of the atomic structure. Following idea for atomic file organization in the project and atomic class naming
+        p a = atom m = molecule o = organisms t = templates p = pages
+
+        h2 Demo component
+        //-https://www.templatemonster.com/?utm_expid=2187874-91.TGHXsvqHQ3yletT66RbSrw.0&utm_referrer=https%3A%2F%2Fwww.google.com%2F
+        img(src="../../images/comp1.png" width="82%")
+        p this Promo component is a molecule made out of 4 atoms
+        ul
+            li h4
+            li h2
+            li p
+            li button
+
+        h3 Here we go:
+        include ../components/promo/promo
+
+
+        include ../components/footer/footer
