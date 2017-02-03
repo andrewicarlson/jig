@@ -1,0 +1,43 @@
+/**
+Usage:
+
+@include flex();
+@include flex-x(flex-direction, row-reverse);
+**/
+
+@mixin flex() {
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-x($property, $values) {
+
+  -ms-#{$property}: $values;
+  -webkit-#{$property}: $values;
+
+  // IE 10 Prefixing
+  @if $property == flex-grow {
+
+    -ms-flex-positive: $values;
+  }
+
+  @else if $property == flex-shrink {
+
+    -ms-flex-negative: $values;
+  }
+
+  @else if $property == flex-basis {
+
+    -ms-flex-preferred-size: $values;
+  }
+
+  @else if $property == align-items {
+
+    -ms-flex-align: $values;
+  }
+
+  #{$property}: $values;
+}
+
