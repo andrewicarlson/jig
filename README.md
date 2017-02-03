@@ -103,6 +103,10 @@ This method converts pixels to rems by doing the math for you using the font-siz
 
 In general we lean away from auto-prefixers in favor of a solution we have more control over. Flexbox prefixing is a good case for that. This mixin includes functionality for cross browser flexbox support with a `flex()` and `flex-x()` include.
 
+#### [Breakpoints](css/sass/breakpoints.scss)
+
+This breakpoint mixin gives you the flexibility to use any breakpoints you want without pre-defining them and just cuts down on a little typing and memory. 
+
 # JavaScript
 
 ## [Array Shuffling](javascript/array-shuffle.js)
