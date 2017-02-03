@@ -103,6 +103,10 @@ This method converts pixels to rems by doing the math for you using the font-siz
 
 In general we lean away from auto-prefixers in favor of a solution we have more control over. Flexbox prefixing is a good case for that. This mixin includes functionality for cross browser flexbox support with a `flex()` and `flex-x()` include.
 
+#### [Placeholder Prefixing](css/sass/placeholder-prefixing.scss)
+
+Cross browser support (`-ms-, -webkit-, and -moz`) support for styling the input placeholder.
+
 # JavaScript
 
 ## [Array Shuffling](javascript/array-shuffle.js)
