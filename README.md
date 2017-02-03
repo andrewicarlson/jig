@@ -107,6 +107,10 @@ In general we lean away from auto-prefixers in favor of a solution we have more 
 
 This breakpoint mixin gives you the flexibility to use any breakpoints you want without pre-defining them and just cuts down on a little typing and memory. 
 
+#### [Placeholder Prefixing](css/sass/placeholder-prefixing.scss)
+
+Cross browser support (`-ms-, -webkit-, and -moz`) support for styling the input placeholder.
+
 # JavaScript
 
 ## [Array Shuffling](javascript/array-shuffle.js)
