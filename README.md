@@ -97,7 +97,10 @@ Array shuffling is useful when you want to randomize the order that elements com
 
 ## [Interpolation](javascript/interpolation.js)
 
+String > Object interpolation is very useful when you need to replace certain parts of a string with an object received or constructed elsewhere. For example if you receive an object with a title prefix (Ms.) and a greeting (Salutations) you would be able to update a string with C# style markers in a string.
 
+String: `{1} {2} Jones,`
+Object: `{"2": "Salutations", "1": "Ms."}`
 
 # Fonts
 
