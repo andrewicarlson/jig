@@ -85,11 +85,19 @@ Oftentimes in a project we have assets that don't all live in the same place. Wh
 
 This method converts pixels to rems by doing the math for you using the font-size declared in the HTML root. `pxToRem()` conversions are useful when working towards a pixel perfect design from mockups while using a more responsive unit.
 
+#### [Flexbox Prefixing](css/sass/flexbox-prefixing.scss)
+
+In general we lean away from auto-prefixers in favor of a solution we have more control over. Flexbox prefixing is a good case for that. This mixin includes functionality for cross browser flexbox support with a `flex()` and `flex-x()` include.
+
 # JavaScript
 
 ## [Array Shuffling](javascript/array-shuffle.js)
 
 Array shuffling is useful when you want to randomize the order that elements come out of an array, or choose an element at random.
+
+## [Interpolation](javascript/interpolation.js)
+
+
 
 # Fonts
 
