@@ -1,0 +1,21 @@
+/**
+Usage:
+
+@include bp-min(768px) {
+
+    // Style properties
+}
+**/
+
+@mixin bp-min($value) {
+    @media (min-width: $value) { @content; }
+}
+
+@mixin bp-max($value) {
+    @media (max-width: $value) { @content; }
+}
+
+@mixin bp-min-max($min-value, $max-value) {
+    @media (min-width: $min-value) and (max-width: $max-value) { @content; }
+}
+
