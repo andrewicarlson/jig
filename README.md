@@ -131,6 +131,14 @@ This function attaches to the `DOMContentLoaded` browser event and calls a metho
 
 [Debouncing](https://davidwalsh.name/javascript-debounce-function) throttles a function from being called on demand to only being called every `n` milliseconds. This is most often used when attaching to either a scroll or resize browser event
 
+## [Add Class(es)](javascript/add-class.ts)
+
+Add a CSS class or string of classes to an HTML element, similar to the jQuery `.addClass()` method.
+
+## [Remove Class(es)](javascript/remove-class.ts)
+
+Remove a CSS class or string of classes from an HTML element, similar to the jQuery `.removeClass()` method.
+
 # Fonts
 
 ## Webfonts
