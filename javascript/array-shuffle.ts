@@ -9,10 +9,10 @@
 
 /**
  *
- * @param arrayToShuffle
+ * @param arrayToShuffle: Array<any>
  * @returns {Array<any>}
  */
-export default function shuffle(arrayToShuffle: Array<any>) {
+export default function shuffle(arrayToShuffle: Array<any>): Array<any> {
     /**
      * Randomize array element order in-place.
      * Using Durstenfeld shuffle algorithm.

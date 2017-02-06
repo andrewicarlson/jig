@@ -11,7 +11,7 @@ interface InterpolationValues {
 /**
  * 
  * @param interpolationString: string
- * @param interpolationValues: Object matching InterpolationValues interface
+ * @param interpolationValues: InterpolationValues interface
  * @returns {string}
  */
 export default function interpolate(interpolationString: string, interpolationValues: InterpolationValues): string {
