@@ -121,14 +121,15 @@ Array shuffling is useful when you want to randomize the order that elements com
 
 String > Object interpolation is very useful when you need to replace certain parts of a string with an object received or constructed elsewhere. For example if you receive an object with a title prefix (Ms.) and a greeting (Salutations) you would be able to update a string with C# style markers in a string.
 
-String: `{1} {2} Jones,`
-Object: `{"2": "Salutations", "1": "Ms."}`
-
 ## [Document Ready](javascript/ready.ts)
 
 A jQuery-free version of $(document).ready(). This has browser support from IE9 on.
 
 This function attaches to the `DOMContentLoaded` browser event and calls a method after the browser is ready. Waiting for document ready is less of a problem than it used to be but still a good idea if you have dependencies that you are waiting for.
+
+## [Debounce](javascript/debounce.ts)
+
+[Debouncing](https://davidwalsh.name/javascript-debounce-function) throttles a function from being called on demand to only being called every `n` milliseconds. This is most often used when attaching to either a scroll or resize browser event
 
 # Fonts
 
