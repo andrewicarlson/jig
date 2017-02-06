@@ -113,7 +113,7 @@ Cross browser support (`-ms-, -webkit-, and -moz`) support for styling the input
 
 # JavaScript
 
-## [Array Shuffling](javascript/array-shuffle.js)
+## [Array Shuffling](javascript/array-shuffle.ts)
 
 Array shuffling is useful when you want to randomize the order that elements come out of an array, or choose an element at random.
 
