@@ -39,9 +39,9 @@ This guide is organized by the type of asset used. For example, a Sass jig would
 
 There are many HTML templating engines out there including [Pug](https://pugjs.org/api/getting-started.html), [Haml](http://haml.info/), [Mustache](https://github.com/janl/mustache.js), and many more.
 
-Each templating engine comes with a unique set of pro's and con's but a templating engine will increase process efficiency in the vast majority of projects due to things like generating the majority of tags reducing the actual time spent typing and tracking down missing HTML end tags, and the ability to break components down into composite parts and reuse. If a project has a templating engine built in (like an Angular 2 or React project) then it is likely best to stick with the built in engine. If there is room for a decision on the engine, however, it is recommended that the team picks one engine and sticks with it across multiple projects. 
+Each templating engine comes with a unique set of pro's and con's but a templating engine will increase process efficiency in the vast majority of projects due to things like generating the majority of tags reducing the actual time spent typing and tracking down missing HTML end tags, and the ability to break components down into composite parts and reuse. If a project has a templating engine built in (like an Angular 2 or React project) then it is likely best to stick with the built in engine. If there is room for a decision on the engine, however, it is recommended that the team picks one engine and sticks with it across multiple projects.
 
-There are reasons to switch templating engines but the majority of the good ones out there have enough in common that switching engines without a technical reason to do so (instead, a preferential reason) complicates processes and is a waste of developer time, energy, and ultimately money. 
+There are reasons to switch templating engines but the majority of the good ones out there have enough in common that switching engines without a technical reason to do so (instead, a preferential reason) complicates processes and is a waste of developer time, energy, and ultimately money.
 
 # CSS
 
@@ -51,7 +51,7 @@ There are reasons to switch templating engines but the majority of the good ones
 
 #### Directory Structure
 
-When building the directory structure in projects using Sass it is sometimes beneficial to group "like" types and do single a single `@import` per type into a larger composite file. This saves a lot of time tracking down individual files and ensuring that files get imported in the proper order. 
+When building the directory structure in projects using Sass it is sometimes beneficial to group "like" types and do single a single `@import` per type into a larger composite file. This saves a lot of time tracking down individual files and ensuring that files get imported in the proper order.
 
 For example:
 
@@ -93,7 +93,7 @@ This approach is similar to the Rule of 1 made more popular by Angular 2.
 
 #### [Asset Pathing](css/sass/asset-pathing.scss)
 
-Oftentimes in a project we have assets that don't all live in the same place. While including a single sprite file would be nice, it isn't always the reality. To deal with that it may be useful to use a function to remove the mental load of recalling a path each time and updating it when it changes. 
+Oftentimes in a project we have assets that don't all live in the same place. While including a single sprite file would be nice, it isn't always the reality. To deal with that it may be useful to use a function to remove the mental load of recalling a path each time and updating it when it changes.
 
 #### [Pixel to REM](css/sass/px-to-rem.scss)
 
@@ -105,7 +105,7 @@ In general we lean away from auto-prefixers in favor of a solution we have more 
 
 #### [Breakpoints](css/sass/breakpoints.scss)
 
-This breakpoint mixin gives you the flexibility to use any breakpoints you want without pre-defining them and just cuts down on a little typing and memory. 
+This breakpoint mixin gives you the flexibility to use any breakpoints you want without pre-defining them and just cuts down on a little typing and memory.
 
 #### [Placeholder Prefixing](css/sass/placeholder-prefixing.scss)
 
@@ -123,6 +123,12 @@ String > Object interpolation is very useful when you need to replace certain pa
 
 String: `{1} {2} Jones,`
 Object: `{"2": "Salutations", "1": "Ms."}`
+
+## [Document Ready](javascript/ready.ts)
+
+A jQuery-free version of $(document).ready(). This has browser support from IE9 on.
+
+This function attaches to the `DOMContentLoaded` browser event and calls a method after the browser is ready. Waiting for document ready is less of a problem than it used to be but still a good idea if you have dependencies that you are waiting for.
 
 # Fonts
 
