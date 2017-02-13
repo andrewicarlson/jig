@@ -25,10 +25,6 @@ This guide is organized by the type of asset used. For example, a Sass jig would
 - [CSS](#css)
 - [JavaScript](#javascript)
 - [Fonts](#fonts)
-- [Images](#images)
-- [Icons](#icons)
-- [SVG](#svg)
-- [Build Tools](#build-tools)
 - [Dotfiles](#dotfiles)
 
 ***
@@ -138,6 +134,10 @@ Add a CSS class or string of classes to an HTML element, similar to the jQuery `
 ## [Remove Class(es)](javascript/remove-class.ts)
 
 Remove a CSS class or string of classes from an HTML element, similar to the jQuery `.removeClass()` method.
+
+## [Convert NodeList to Array](javascript/nodelist-to-array.ts)
+
+Converts a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) to an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) to give access to native Array methods.
 
 ## [Escape Key Callback](javascript/esc-callback.ts)
 
