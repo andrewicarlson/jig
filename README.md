@@ -25,10 +25,6 @@ This guide is organized by the type of asset used. For example, a Sass jig would
 - [CSS](#css)
 - [JavaScript](#javascript)
 - [Fonts](#fonts)
-- [Images](#images)
-- [Icons](#icons)
-- [SVG](#svg)
-- [Build Tools](#build-tools)
 - [Dotfiles](#dotfiles)
 
 ***
@@ -139,6 +135,10 @@ Add a CSS class or string of classes to an HTML element, similar to the jQuery `
 
 Remove a CSS class or string of classes from an HTML element, similar to the jQuery `.removeClass()` method.
 
+## [Convert NodeList to Array](javascript/nodelist-to-array.ts)
+
+Converts a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) to an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) to give access to native Array methods.
+
 # Fonts
 
 ## Webfonts
@@ -146,14 +146,6 @@ Remove a CSS class or string of classes from an HTML element, similar to the jQu
 ### [webfontloader](fonts/webfontloader.js)
 
 In general, despite a potential brief flash of unstyled text (FOUT), it is best to load webfonts asynchronously. After a user has visited a page on your site once those fonts will usually be cached in their browser so they should only see a FOUT once. This downside of a single FOUT is usually outweighed by the benefits of a significantly faster loading site that is never blocked from loading if the resource, be it Google or Typekit, is unable to serve the fonts that have been requested.
-
-# Images
-
-# SVG
-
-# Icons
-
-# Build Tools
 
 # Dotfiles
 
@@ -163,6 +155,14 @@ In general, despite a potential brief flash of unstyled text (FOUT), it is best 
 
 Installing NPM packages is great until members on a team aren't using the same versions. This is usually caused by a `^` or `~` in front of a package version in your `package.json`. This can be solved by an addition to the command line (more cognitive load) or a simple `.npmrc` file placed in the root of the project alongside the `package.json` that tells NPM to save the exact version number.
 
+## NVM
+
 ### [.nvmrc](dotfiles/nvm/.nvmrc)
 
 [NVM](https://github.com/creationix/nvm) is a useful utility for managing versions of Node on a single machine. Some projects may require a newer version of Node than others and NVM makes it easy to switch between those versions. An `.nvmrc` file will force NVM to default to a specific, predetermined version of Node rather than typing `nvm use <version number>` every time.
+
+## Bash Profile (shell scripts)
+
+### [cleanupBranches](dotfiles/bash_profile/cleanupBranches.txt)
+
+This bash script will try to do a soft delete on the git branches in your current repo based on the regex that you pass it. For example, all `feature/` or `bugfix/` branches.
