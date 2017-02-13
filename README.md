@@ -139,6 +139,10 @@ Add a CSS class or string of classes to an HTML element, similar to the jQuery `
 
 Remove a CSS class or string of classes from an HTML element, similar to the jQuery `.removeClass()` method.
 
+## [Escape Key Callback](javascript/esc-callback.ts)
+
+Call any function when the user presses the escape key.
+
 # Fonts
 
 ## Webfonts
