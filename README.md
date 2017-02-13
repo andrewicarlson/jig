@@ -139,6 +139,10 @@ Remove a CSS class or string of classes from an HTML element, similar to the jQu
 
 Converts a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) to an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) to give access to native Array methods.
 
+## [Escape Key Callback](javascript/esc-callback.ts)
+
+Call any function when the user presses the escape key.
+
 # Fonts
 
 ## Webfonts
