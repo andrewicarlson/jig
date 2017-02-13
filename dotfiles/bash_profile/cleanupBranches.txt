@@ -1,0 +1,17 @@
+/**
+Add this to your ~/.bash_profile to get bulk delete git branches from the terminal.
+
+Usage from terminal:
+cleanupBranches "bugfix/"
+
+This uses a soft delete (-d)
+**/
+
+cleanupBranches() {
+    read -p "Are you sure you want to delete all branches in this repo that match $1?" yn
+    case $yn in
+        [Yy]* ) git branch | grep $1 | xargs git branch -d;;
+        [Nn]* ) echo "Operation cancelled. No branches were deleted.";;
+        * ) echo "Please answer yes or no.";;
+    esac
+}
