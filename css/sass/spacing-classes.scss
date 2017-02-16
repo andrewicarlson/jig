@@ -1,0 +1,100 @@
+/**
+ * @margin-and-padding.scss
+ * global classes for margin and padding
+ * naming order follows the property shorthand:
+ * • top • right • bottom • left
+ * m or p (margin or padding)
+ * side  (top • right • bottom • left)
+ * amount and unit (px • em • rem)
+ * example generated classes:
+ *   .m-trbl--1px, .m-t--1em, m-b--1rem
+ *   .p-trbl--1px, .p-t--1em, p-r--2rem
+ */
+
+$base-font-size: 16; //should pull the sites bfs
+$units: px, em, rem;
+
+@mixin generate-spacing-classes($spacing-properties: ()) {
+  @each $item in $spacing-properties {
+    @each $unit-base in $units {
+
+      @if $unit-base == px {
+        .m-#{nth($item, 6)}--#{nth($item, 1)}px {
+          margin: #{nth($item, 2)}px #{nth($item, 3)}px #{nth($item, 4)}px #{nth($item, 5)}px;
+        }
+
+        .p-#{nth($item, 6)}--#{nth($item, 1)}px {
+          padding: #{nth($item, 2)}px #{nth($item, 3)}px #{nth($item, 4)}px #{nth($item, 5)}px;
+        }
+      } @else if $unit-base == em {
+        .m-#{nth($item, 6)}--#{nth($item, 1)}em {
+          margin: #{nth($item, 2)}em #{nth($item, 3)}em #{nth($item, 4)}em #{nth($item, 5)}em;
+        }
+
+        .p-#{nth($item, 6)}--#{nth($item, 1)}em {
+          padding: #{nth($item, 2)}em #{nth($item, 3)}em #{nth($item, 4)}em #{nth($item, 5)}em;
+        }
+      } @else if $unit-base == rem {
+        .m-#{nth($item, 6)}--#{nth($item, 1)}rem {
+          margin: #{nth($item, 2)}rem #{nth($item, 3)}rem #{nth($item, 4)}rem #{nth($item, 5)}rem;
+        }
+
+        .p-#{nth($item, 6)}--#{nth($item, 1)}rem {
+          padding: #{nth($item, 2)}rem #{nth($item, 3)}rem #{nth($item, 4)}rem #{nth($item, 5)}rem;
+        }
+      }
+    }
+  }
+}
+
+$step: 1;
+$total: $base-font-size;
+
+@for $i from $step through $total {
+
+  $unit: $i;
+
+  //single sided
+  $top-space-vars:       $i $unit 0 0 0 t,;
+  $right-space-vars:     $i 0 $unit 0 0 r,;
+  $bottom-space-vars:    $i 0 0 $unit 0 b,;
+  $left-space-vars:      $i 0 0 0 $unit l,;
+
+  @include generate-spacing-classes($top-space-vars);
+  @include generate-spacing-classes($right-space-vars);
+  @include generate-spacing-classes($bottom-space-vars);
+  @include generate-spacing-classes($left-space-vars);
+
+  //two sided
+  $topRight-space-vars:       $i $unit $unit 0 0 tr,;
+  $topBottom-space-vars:      $i $unit 0 $unit 0 tb,;
+  $topLeft-space-vars:        $i $unit 0 0 $unit tl,;
+  $rightBottom-space-vars:    $i 0 $unit $unit 0 rb,;
+  $rightLeft-space-vars:      $i 0 $unit 0 $unit rl,;
+  $bottomLeft-space-vars:     $i 0 0 $unit $unit bl,;
+
+  @include generate-spacing-classes($topRight-space-vars);
+  @include generate-spacing-classes($topBottom-space-vars);
+  @include generate-spacing-classes($topLeft-space-vars);
+  @include generate-spacing-classes($rightBottom-space-vars);
+  @include generate-spacing-classes($rightLeft-space-vars);
+  @include generate-spacing-classes($bottomLeft-space-vars);
+
+  //three sided
+  $topRightBottom-space-vars:     $i $unit $unit $unit 0 trb,;
+  $topRightLeft-space-vars:       $i $unit $unit 0 $unit trl,;
+  $topBottomLeft-space-vars:      $i $unit 0 $unit $unit tbl,;
+  $rightBottomLeft-space-vars:    $i 0 $unit $unit $unit rbl,;
+
+  @include generate-spacing-classes($topRightBottom-space-vars);
+  @include generate-spacing-classes($topRightLeft-space-vars);
+  @include generate-spacing-classes($topBottomLeft-space-vars);
+  @include generate-spacing-classes($rightBottomLeft-space-vars);
+
+
+  //four sided
+  $topRightBottomLeft-space-vars: $i $unit $unit $unit $unit trbl,;
+
+  @include generate-spacing-classes($topRightBottomLeft-space-vars);
+
+}
