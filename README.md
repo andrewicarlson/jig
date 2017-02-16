@@ -113,7 +113,7 @@ Cross browser support (`-ms-, -webkit-, and -moz`) support for styling the input
 
 #### [Spacing Classes](css/sass/spacing-classes.scss)
 
-A mixin to generate easy-to-use margin and padding classes for all and any combination of sides in multiple units (rem, em, and px). Demo can be found on CodePen @ http://codepen.io/CodeAnd_/full/JEwVmq/
+A mixin to generate easy-to-use margin and padding classes for all and any combination of sides in multiple units (rem, em, and px). Demo can be found on [CodePen](http://codepen.io/CodeAnd_/full/JEwVmq/)
 
 # JavaScript
 
