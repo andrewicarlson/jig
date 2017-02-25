@@ -11,7 +11,7 @@
  */
 export default function addClass(el:HTMLElement, cssClasses: string): void {
     if(el.classList) {
-        el.classList.add(cssClasses);
+        DOMTokenList.prototype.add.apply(el.classList, cssClasses.split(' '));
     } else {
         el.className += ' ' + cssClasses;
     }
