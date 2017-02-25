@@ -147,6 +147,10 @@ Converts a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)
 
 Call any function when the user presses the escape key.
 
+## [Object Reduction](javascript/object-reduction.ts)
+
+Pluck properties from one object to create a new object. The primary purpose of this is to follow the [Principle of Least Privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) and only give a method exactly what it needs.
+
 # Fonts
 
 ## Webfonts
