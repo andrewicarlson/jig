@@ -139,6 +139,10 @@ Add a CSS class or string of classes to an HTML element, similar to the jQuery `
 
 Remove a CSS class or string of classes from an HTML element, similar to the jQuery `.removeClass()` method.
 
+## [Toggle Class](javascript/toggle-class.ts)
+
+Toggle the existance of a CSS class from an HTML element, similar to the jQuery `.toggleClass()` method.
+
 ## [Convert NodeList to Array](javascript/nodelist-to-array.ts)
 
 Converts a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) to an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) to give access to native Array methods.
