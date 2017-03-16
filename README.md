@@ -113,45 +113,45 @@ A mixin to generate easy-to-use margin and padding classes for all and any combi
 
 # JavaScript
 
-## [Array Shuffling](javascript/array-shuffle.ts)
+#### [Array Shuffling](javascript/array-shuffle.ts)
 
 Array shuffling is useful when you want to randomize the order that elements come out of an array, or choose an element at random.
 
-## [Interpolation](javascript/interpolation.ts)
+#### [Interpolation](javascript/interpolation.ts)
 
 String > Object interpolation is very useful when you need to replace certain parts of a string with an object received or constructed elsewhere. For example if you receive an object with a title prefix (Ms.) and a greeting (Salutations) you would be able to update a string with C# style markers in a string.
 
-## [Document Ready](javascript/ready.ts)
+#### [Document Ready](javascript/ready.ts)
 
 A jQuery-free version of $(document).ready(). This has browser support from IE9 on.
 
 This function attaches to the `DOMContentLoaded` browser event and calls a method after the browser is ready. Waiting for document ready is less of a problem than it used to be but still a good idea if you have dependencies that you are waiting for.
 
-## [Debounce](javascript/debounce.ts)
+#### [Debounce](javascript/debounce.ts)
 
 [Debouncing](https://davidwalsh.name/javascript-debounce-function) throttles a function from being called on demand to only being called every `n` milliseconds. This is most often used when attaching to either a scroll or resize browser event
 
-## [Add Class(es)](javascript/add-class.ts)
+#### [Add Class(es)](javascript/add-class.ts)
 
 Add a CSS class or string of classes to an HTML element, similar to the jQuery `.addClass()` method.
 
-## [Remove Class(es)](javascript/remove-class.ts)
+#### [Remove Class(es)](javascript/remove-class.ts)
 
 Remove a CSS class or string of classes from an HTML element, similar to the jQuery `.removeClass()` method.
 
-## [Toggle Class](javascript/toggle-class.ts)
+#### [Toggle Class](javascript/toggle-class.ts)
 
 Toggle the existance of a CSS class from an HTML element, similar to the jQuery `.toggleClass()` method.
 
-## [Convert NodeList to Array](javascript/nodelist-to-array.ts)
+#### [Convert NodeList to Array](javascript/nodelist-to-array.ts)
 
 Converts a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) to an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) to give access to native Array methods.
 
-## [Escape Key Callback](javascript/esc-callback.ts)
+#### [Escape Key Callback](javascript/esc-callback.ts)
 
 Call any function when the user presses the escape key.
 
-## [Object Reduction](javascript/object-reduction.ts)
+#### [Object Reduction](javascript/object-reduction.ts)
 
 Pluck properties from one object to create a new object. The primary purpose of this is to follow the [Principle of Least Privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) and only give a method exactly what it needs.
 
@@ -159,7 +159,7 @@ Pluck properties from one object to create a new object. The primary purpose of 
 
 ## Webfonts
 
-### [webfontloader](fonts/webfontloader.js)
+#### [webfontloader](fonts/webfontloader.js)
 
 In general, despite a potential brief flash of unstyled text (FOUT), it is best to load webfonts asynchronously. After a user has visited a page on your site once those fonts will usually be cached in their browser so they should only see a FOUT once. This downside of a single FOUT is usually outweighed by the benefits of a significantly faster loading site that is never blocked from loading if the resource, be it Google or Typekit, is unable to serve the fonts that have been requested.
 
@@ -167,18 +167,18 @@ In general, despite a potential brief flash of unstyled text (FOUT), it is best 
 
 ## NPM
 
-### [.npmrc](dotfiles/npm/.npmrc)
+#### [.npmrc](dotfiles/npm/.npmrc)
 
 Installing NPM packages is great until members on a team aren't using the same versions. This is usually caused by a `^` or `~` in front of a package version in your `package.json`. This can be solved by an addition to the command line (more cognitive load) or a simple `.npmrc` file placed in the root of the project alongside the `package.json` that tells NPM to save the exact version number.
 
 ## NVM
 
-### [.nvmrc](dotfiles/nvm/.nvmrc)
+#### [.nvmrc](dotfiles/nvm/.nvmrc)
 
 [NVM](https://github.com/creationix/nvm) is a useful utility for managing versions of Node on a single machine. Some projects may require a newer version of Node than others and NVM makes it easy to switch between those versions. An `.nvmrc` file will force NVM to default to a specific, predetermined version of Node rather than typing `nvm use <version number>` every time.
 
 ## Bash Profile (shell scripts)
 
-### [cleanupBranches](dotfiles/bash_profile/cleanupBranches.txt)
+#### [cleanupBranches](dotfiles/bash_profile/cleanupBranches.txt)
 
 This bash script will try to do a soft delete on the git branches in your current repo based on the regex that you pass it. For example, all `feature/` or `bugfix/` branches.
