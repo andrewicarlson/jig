@@ -1,0 +1,23 @@
+{
+  "name": "jig",
+  "version": "1.0.0",
+  "description": "A living list of helper utilities, concepts, and patterns to get front-end projects off on the right foot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewicarlson/jig.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewicarlson/jig.gitissues"
+  },
+  "homepage": "https://github.com/andrewicarlson/jig#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
+  }
+}
