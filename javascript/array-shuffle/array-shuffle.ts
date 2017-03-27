@@ -1,11 +1,14 @@
 /**
- The shuffle function receives an array and shuffles it's elements.
-
- Usage:
-
- var foo = ['x', 'y', 'z'];
- var shuffled = shuffle(foo);
- **/
+ * The shuffle function receives an array and shuffles it's elements in place.
+ *
+ * Uses the Durstenfeld shuffle algorithm.
+ * https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
+ *
+ * Usage:
+ *
+ * var foo = ['x', 'y', 'z'];
+ * var shuffled = shuffle(foo);
+ */
 
 /**
  *
@@ -13,11 +16,11 @@
  * @returns {Array<any>}
  */
 export default function shuffle(arrayToShuffle: Array<any>): Array<any> {
-    /**
-     * Randomize array element order in-place.
-     * Using Durstenfeld shuffle algorithm.
-     * https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
-     */
+
+    if(!Array.isArray(arrayToShuffle)) {
+        throw new Error("Argument must be type Array");
+    }
+
     for (var i = arrayToShuffle.length - 1; i > 0; i--) {
 
         var j = Math.floor(Math.random() * (i + 1));
