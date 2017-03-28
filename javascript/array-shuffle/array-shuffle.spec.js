@@ -28,4 +28,25 @@ describe('array-shuffle', function() {
 
         expect(shuffled).to.be.an('array');
     });
+
+    it('should return array elements in a different order', function() {
+        var origArray = [1, 2, 3, 4, 5, 6];
+        var newArray = shuffle(Array.from(origArray));
+
+        expect(newArray).to.not.eql(origArray);
+    });
+
+    it('should shuffle array elements in place', function() {
+        var origArray = [1, 2, 3, 4, 5, 6];
+        var newArray = shuffle(origArray);
+
+        expect(newArray).to.eql(origArray);
+    });
+
+    it('should return an array of the same length as original', function() {
+        var origArray = [1, 2, 3, 4, 5, 6];
+        var newArray = shuffle(origArray);
+
+        expect(newArray.length).to.equal(origArray.length);
+    });
 });
