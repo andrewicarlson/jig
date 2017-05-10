@@ -185,4 +185,4 @@ This bash script will try to do a soft delete on the git branches in your curren
 
 #### [patchFromOtherGit](dotfiles/bash_profile/patchFromOtherGit.txt)
 
-This bash script will try to patch a commit from a provided git repo into the current repo. For example if you're sitting in `repo1` and use `patchFromOtherGit ../repo2/git <commit sha>` it will attempt to patch `<commit sha>` from `repo2` into your `repo1`.
+This bash script will try to patch a commit from a provided git repo into the current repo. For example if you're sitting in `repo1` and use `patchFromOtherGit ../repo2/.git <commit sha>` it will attempt to patch `<commit sha>` from `repo2` into your `repo1`.
