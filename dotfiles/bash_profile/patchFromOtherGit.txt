@@ -1,0 +1,17 @@
+/**
+Add this to your ~/.bash_profile to patch a commit from another git repo into your current repo.
+
+Usage from terminal:
+patchFromOtherGit "../some other project folder/.git" 282acd9i
+patchFromOtherGit ../some\ other\ project\ folder/.git 282acd9i
+
+**/
+
+patchFromOtherGit() {
+    read -p "Are you sure you want to patch commit $2 from $1 into this repo?" yn
+    case $yn in
+        [Yy]* ) git --git-dir="$1" format-patch -k -1 --stdout $2 | git am -3 -k;;
+        [Nn]* ) echo "Operation cancelled.";;
+        * ) echo "Please answer yes or no.";;
+    esac
+}
