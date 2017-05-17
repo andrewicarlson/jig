@@ -186,3 +186,9 @@ This bash script will try to do a soft delete on the git branches in your curren
 #### [patchFromOtherGit](dotfiles/bash_profile/patchFromOtherGit.txt)
 
 This bash script will try to patch a commit from a provided git repo into the current repo. For example if you're sitting in `repo1` and use `patchFromOtherGit ../repo2/.git <commit sha>` it will attempt to patch `<commit sha>` from `repo2` into your `repo1`.
+
+## Git Hooks
+
+#### [pre-commit linting](dotfiles/hooks/pre-commit)
+
+This script will lint all staged JavaScript and Typescript files with ESLint or TSLint respectively. It assumes local installations of the linters but can be modified to use a global installation. It will fail the commit if a file fails the lint test. It can be used by copying the file (pre-commit) into the .git/hooks/ directory in a project.

@@ -1,0 +1,52 @@
+#!/bin/sh
+#
+# An example pre-commit hook script for validating JavaScript / Typescript files against ESLint.
+#
+# This will lint each staged JavaScript and Typescript file and will deny the commit if it doesn't pass.
+# To add this hook copy this file to .git/hooks/ in your local repository.
+# This script can be bypassed by using the --no-verify flag.
+#
+# This script assumes a local install of tslint and eslint.
+
+# Modified from: https://gist.github.com/wesbos/8aec9d2ff7f7cf9dd65ca2c20d5dfc23
+
+jsFiles=$(git diff --cached --name-only | grep '\.jsx\?$')
+tsFiles=$(git diff --cached --name-only | grep '\.tsx\?$')
+
+ESLINT="node_modules/.bin/eslint"
+TSLINT="node_modules/.bin/tslint"
+
+# Prevent linting help messages if no files matched
+if [[ $jsFiles = "" && $tsFiles = "" ]] ; then
+  exit 0
+fi
+
+if [[ $jsFiles != "" && ! -x "$ESLINT" ]] ; then
+  printf "Please install ESLint"
+  exit 1
+fi
+
+if [[ $tsFiles != "" && ! -x "$TSLINT" ]] ; then
+  printf "Please install TSLint"
+  exit 1
+fi
+
+failed=0
+for file in ${jsFiles}; do
+  git show :$file | "$ESLINT" $file
+  if [[ $? != 0 ]] ; then
+    failed=1
+  fi
+done;
+
+for file in ${tsFiles}; do
+  git show :$file | "$TSLINT" $file
+  if [[ $? != 0 ]] ; then
+    failed=1
+  fi
+done;
+
+if [[ $failed != 0 ]] ; then
+  echo "Linting failed, git commit denied!"
+  exit $failed
+fi
