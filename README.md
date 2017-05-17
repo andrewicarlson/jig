@@ -167,13 +167,13 @@ In general, despite a potential brief flash of unstyled text (FOUT), it is best 
 
 ## NPM
 
-#### [.npmrc](dotfiles/npm/.npmrc)
+#### [.npmrc](dotfiles/.npmrc)
 
 Installing NPM packages is great until members on a team aren't using the same versions. This is usually caused by a `^` or `~` in front of a package version in your `package.json`. This can be solved by an addition to the command line (more cognitive load) or a simple `.npmrc` file placed in the root of the project alongside the `package.json` that tells NPM to save the exact version number.
 
 ## NVM
 
-#### [.nvmrc](dotfiles/nvm/.nvmrc)
+#### [.nvmrc](dotfiles/.nvmrc)
 
 [NVM](https://github.com/creationix/nvm) is a useful utility for managing versions of Node on a single machine. Some projects may require a newer version of Node than others and NVM makes it easy to switch between those versions. An `.nvmrc` file will force NVM to default to a specific, predetermined version of Node rather than typing `nvm use <version number>` every time.
 
@@ -192,3 +192,13 @@ This bash script will try to patch a commit from a provided git repo into the cu
 #### [pre-commit linting](dotfiles/hooks/pre-commit)
 
 This script will lint all staged JavaScript and Typescript files with ESLint or TSLint respectively. It assumes local installations of the linters but can be modified to use a global installation. It will fail the commit if a file fails the lint test. It can be used by copying the file (pre-commit) into the .git/hooks/ directory in a project.
+
+## Lint Configs
+
+#### [.eslintrc](dotfiles/.eslintrc)
+
+A starting point for ESLint enforcing the Airbnb base standards for ES6.
+
+#### [tslint.json](dotfiles/tslint.json)
+
+A starting point for TSLint enforcing the recommended base standards for Typescript.
