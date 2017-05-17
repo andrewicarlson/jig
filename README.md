@@ -85,7 +85,7 @@ componentY
 -- _componentY.js
 ```
 
-This approach is similar to the Rule of 1 made more popular by Angular 2. 
+This approach is similar to the Rule of 1 made more popular by Angular 2.
 
 #### [Asset Pathing](css/sass/asset-pathing.scss)
 
@@ -182,3 +182,7 @@ Installing NPM packages is great until members on a team aren't using the same v
 #### [cleanupBranches](dotfiles/bash_profile/cleanupBranches.txt)
 
 This bash script will try to do a soft delete on the git branches in your current repo based on the regex that you pass it. For example, all `feature/` or `bugfix/` branches.
+
+#### [patchFromOtherGit](dotfiles/bash_profile/patchFromOtherGit.txt)
+
+This bash script will try to patch a commit from a provided git repo into the current repo. For example if you're sitting in `repo1` and use `patchFromOtherGit ../repo2/.git <commit sha>` it will attempt to patch `<commit sha>` from `repo2` into your `repo1`.

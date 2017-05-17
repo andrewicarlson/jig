@@ -1,5 +1,5 @@
 /**
-Add this to your ~/.bash_profile to get bulk delete git branches from the terminal.
+Add this to your ~/.bash_profile to bulk delete git branches from the terminal.
 
 Usage from terminal:
 cleanupBranches "bugfix/"
