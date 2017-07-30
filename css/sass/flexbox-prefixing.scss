@@ -1,10 +1,21 @@
-/**
-Usage:
+/*
+ * Mixin for adding Flexbox to the flex container and the flex items, this includes prefixes for browser support
+ * Includes webkit and -ms prefixes for IE10+
+ *
+ * Demo @: https://codepen.io/jjbert18/full/EvVYRV/
+ *
+ * Usage:
+ * .flex-container {
+ *   @include flex();
+ *   @include flex-x(flex-direction, row-reverse);
+ * }
+ * .flex-item {
+ *   @include flex-x(flex-basis, 25%);
+ * }
+ *
+ */
 
-@include flex();
-@include flex-x(flex-direction, row-reverse);
-**/
-
+// Main flex display for flex container, enables a flex context for all its direct children
 @mixin flex() {
 
   display: -ms-flexbox;
@@ -12,32 +23,82 @@ Usage:
   display: flex;
 }
 
+// Individual flex properties for flex container and items
 @mixin flex-x($property, $values) {
 
   -ms-#{$property}: $values;
   -webkit-#{$property}: $values;
 
-  // IE 10 Prefixing
-  @if $property == flex-grow {
+  // ====== IE 10 Prefixing ======
 
-    -ms-flex-positive: $values;
+  // === Parent Properties (flex container) ===
+  // Sets the main-axis, defining the direction flex items are placed in the flex container
+  @if $property == flex-direction {
+
+    -ms-flex-direction: $values;
   }
 
-  @else if $property == flex-shrink {
+  // Allows the flex items to wrap to multiple lines
+  @else if $property == flex-wrap {
 
-    -ms-flex-negative: $values;
+    -ms-flex-wrap: $values;
   }
 
-  @else if $property == flex-basis {
+  // Defines the alignment along the main axis
+  @else if $property == justify-content {
 
-    -ms-flex-preferred-size: $values;
+    -ms-flex-pack: $values;
   }
 
+  // Defines how flex items are laid out along the cross axis on the current line
   @else if $property == align-items {
 
     -ms-flex-align: $values;
   }
 
+  // Aligns a flex container's lines within when there is extra space in the cross-axis
+  @else if $property == align-content {
+
+    -ms-flex-line-pack: $values;
+  }
+
+  // === Child Properties (flex items) ===
+  // The shorthand for flex-grow, flex-shrink and flex-basis combined
+  @else if $property == flex {
+
+    -ms-flex: $values;
+  }
+
+  // This defines the ability for a flex item to grow if necessary
+  @else if $property == flex-grow {
+
+    -ms-flex-positive: $values;
+  }
+
+  // This defines the ability for a flex item to shrink if necessary
+  @else if $property == flex-shrink {
+
+    -ms-flex-negative: $values;
+  }
+
+  // This defines the default size of an element before the remaining space is distributed
+  @else if $property == flex-basis {
+
+    -ms-flex-preferred-size: $values;
+  }
+
+  // Allows the default alignment to be overridden for individual flex items
+  @else if $property == align-self {
+
+    -webkit-align-self: $values;
+  }
+
+  // The order that flex items appear in the flex container
+  @else if $property == order {
+
+    -ms-flex-order: $values;
+  }
+
+  // ====== Unprefixed default properties ======
   #{$property}: $values;
 }
-
