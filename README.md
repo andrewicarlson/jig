@@ -155,6 +155,10 @@ Call any function when the user presses the escape key.
 
 Pluck properties from one object to create a new object. The primary purpose of this is to follow the [Principle of Least Privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege) and only give a method exactly what it needs.
 
+#### [AWS Lambda Environment Variable key decryption](javascript/kms-decryption.js)
+
+Oftentimes we have multiple environment variables stored and encrypted in an AWS Lambda function using KMS. Those variables need to be decrypted but are all managed using callback functions. This is a straightforward Promise pattern for resolving all environment variables before continuing with the execution of the Lambda expression.
+
 # Fonts
 
 ## Webfonts
